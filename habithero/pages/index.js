@@ -31,13 +31,20 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="w-full items-center">
       <Head>
         <title> Habit Hero</title>
       </Head>
-      <div>
-        <input value={newHabit} onChange={handleChange} />
-        <label>Habit Type</label>
+      <div className="flex justify-center items-center border-b-2 border-blue-500 py-4">
+        <input
+          placeholder="Type habit here..."
+          value={newHabit}
+          onChange={handleChange}
+          className="
+          form-control appearance-none block w-1/4 px-3 py-1.5 text-base font-normal bg-clip-padding border-2 border-solid border-blue-300 rounded 
+          transition-all ease-in-out m-0 focus: text-gray-800 focus: bg-white focus:border-blue-800 focus: outline-none
+          "
+        />
         <select
           value={habitType}
           onChange={(e) => setHabitType(e.target.value)}
