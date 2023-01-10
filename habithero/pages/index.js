@@ -41,19 +41,25 @@ export default function Home() {
           value={newHabit}
           onChange={handleChange}
           className="
-          form-control appearance-none block w-1/4 px-3 py-1.5 text-base font-normal bg-clip-padding border-2 border-solid border-blue-300 rounded 
+          form-control appearance-none block h-1/3 w-1/4 px-3 py-1.5 text-base font-normal bg-clip-padding border-2 border-solid border-blue-300 rounded-lg 
           transition-all ease-in-out m-0 focus: text-gray-800 focus: bg-white focus:border-blue-800 focus: outline-none
           "
         />
         <select
           value={habitType}
           onChange={(e) => setHabitType(e.target.value)}
+          className=" h-11 ml-5  text-base rounded-lg  border-blue-300 border-2 border-solid focus:border-blue-800 focus: outline-none block w-1/6 p-2.5"
         >
           <option value="Good">Good Habit</option>
           <option value="Habit">Habit</option>
           <option value="Bad">Bad Habit</option>
         </select>
-        <button onClick={addHabit}> Add Habit</button>
+        <button
+          onClick={addHabit}
+          className=" h-10 inline-block ml-5 px-7 py-2.5 rounded-lg bg-blue-600 text-white font-medium text-xs leading-tight uppercase shadow-md hover:bg-blue-500 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+        >
+          Add Habit
+        </button>
       </div>
       <div className="list">
         {habitList.map((habit) => {
