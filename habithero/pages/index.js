@@ -61,7 +61,7 @@ export default function Home() {
           Add Habit
         </button>
       </div>
-      <div className="list">
+      <div className="items-center w-full pt-3 flex flex-col h-auto">
         {habitList.map((habit) => {
           return (
             <Habit
