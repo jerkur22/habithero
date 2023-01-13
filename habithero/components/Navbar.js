@@ -10,10 +10,10 @@ function Navbar(props) {
   const router = useRouter();
 
   const signUserOut = () => {
+    router.push("/login");
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
-      router.push("/");
     });
   };
 
