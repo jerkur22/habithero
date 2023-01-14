@@ -12,7 +12,7 @@ function Login(props) {
     signInWithPopup(auth, provider).then((result) => {
       localStorage.setItem("isAuth", true);
       setIsAuth(true);
-      router.push("/about");
+      router.push("/habits");
     });
   };
   return (
